@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace APITestProjectTests.Tests___Sad_Path
 {
-    public class WhenARequestIsSentWithAnInvalidMovieTitle
+    public class WhenARequestIsSentWithAnInvalidMDBID
     {
         private MovieServices _movieServices;
         [OneTimeSetUp]
