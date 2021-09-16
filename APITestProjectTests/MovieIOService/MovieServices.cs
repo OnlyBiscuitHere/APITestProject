@@ -17,12 +17,20 @@ namespace APITestProjectTests.MovieIOService
             CallManager = new CallManager();
             MovieResponseDTO = new DTO<MovieResponse>();
         }
-        public async Task MakeRequest(string movie)
+        public async Task MakeAMovieRequestAsync(string movie)
         {
             MovieSelected = movie;
-            MovieResponse = await CallManager.MakeMovieRequestAsync(movie);
+            MovieResponse = await CallManager.MakeMovieRequestByTitleAsync(movie);
             Json_response = JObject.Parse(MovieResponse);
             MovieResponseDTO.DeserializeResponse(MovieResponse);
         }
+        public async Task MakeAIMDBRequestAsync(string imdb)
+        {
+            MovieSelected = imdb;
+            MovieResponse = await CallManager.MakeMovieRequestByIDAsync(imdb);
+            Json_response = JObject.Parse(MovieResponse);
+            MovieResponseDTO.DeserializeResponse(MovieResponse);
+        }
+
     }
 }

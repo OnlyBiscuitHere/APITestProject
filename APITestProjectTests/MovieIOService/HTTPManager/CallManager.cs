@@ -12,11 +12,19 @@ namespace APITestProjectTests.MovieService.HTTPManager
         {
             _client = new RestClient(AppConfigReader.BaseUrl);
         }
-        public async Task<string> MakeMovieRequestAsync(string movie)
+        public async Task<string> MakeMovieRequestByTitleAsync(string movie)
         {
             var request = new RestRequest();
             SpacerMovie(movie);
             request.Resource = $"?t={movie}&apikey=6d25abe0";
+            IRestResponse response = await _client.ExecuteAsync(request);
+            StatusCode = (int)response.StatusCode;
+            return response.Content;
+        }
+        public async Task<string> MakeMovieRequestByIDAsync(string imdb)
+        {
+            var request = new RestRequest();
+            request.Resource = $"?i={imdb}&apikey=6d25abe0";
             IRestResponse response = await _client.ExecuteAsync(request);
             StatusCode = (int)response.StatusCode;
             return response.Content;
