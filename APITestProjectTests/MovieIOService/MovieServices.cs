@@ -31,8 +31,20 @@ namespace APITestProjectTests.MovieIOService
             Json_response = JObject.Parse(MovieResponse);
             MovieResponseDTO.DeserializeResponse(MovieResponse);
         }
-
-        
-
+        public string GetYearOfMovie()
+        {
+            return MovieResponseDTO.Response.Year;
+        }
+        public bool RottenTomatoReviewed()
+        {
+            foreach (var review in MovieResponseDTO.Response.Ratings)
+            {
+                if (review.Source == "Rotten Tomatoes")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

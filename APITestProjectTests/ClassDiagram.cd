@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="APITestProjectTests.MovieService.HTTPManager.CallManager">
+    <Position X="1.5" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAEAAAAAAAAAAAAAAAAAAIAAQAAAAAAA=</HashCode>
+      <FileName>MovieIOService\HTTPManager\CallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APITestProjectTests.MovieIOService.MovieServices">
+    <Position X="5.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABEAgEAAAAACAAIAAAAAQAAAAQBAAAAAAAAAAA=</HashCode>
+      <FileName>MovieIOService\MovieServices.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MovieResponseDTO" />
+      <Property Name="CallManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="APITestProjectTests.MovieService.DataHandling.MovieResponse">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAADABAgERQCgIAAAAAAAIQEBEAAQAEAAMgIAA=</HashCode>
+      <FileName>MovieIOService\DataHandling\Model.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ratings" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="APITestProjectTests.MovieService.DataHandling.Rating">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>MovieIOService\DataHandling\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="APITestProjectTests.MovieService.DataHandling.DTO&lt;ResponseType&gt;">
+    <Position X="1" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>MovieIOService\DataHandling\DTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="APITestProjectTests.MovieService.DataHandling.IResponse">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MovieIOService\DataHandling\IResponse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

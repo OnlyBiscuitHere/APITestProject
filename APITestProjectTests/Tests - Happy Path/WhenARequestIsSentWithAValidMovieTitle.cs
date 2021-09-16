@@ -27,7 +27,7 @@ namespace APITestProjectTests.Tests___Happy_Path
         [Test]
         public void CorrectYearIsReturned()
         {
-            Assert.That(_movieService.MovieResponseDTO.Response.Year, Is.EqualTo("2014"));
+            Assert.That(_movieService.GetYearOfMovie(), Is.EqualTo("2014"));
         }
         [Test]
         public void CorrectAgeRatingIsReturned()
