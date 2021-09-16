@@ -46,5 +46,14 @@ namespace APITestProjectTests.MovieIOService
             }
             return false;
         }
+        public bool IsActorInMovie(string actorName)
+        {
+            return MovieResponse.Contains(actorName);
+        }
+
+        public bool HasMovieReceivedAwards()
+        {
+            return (MovieResponseDTO.Response.Awards != "N/A"); /*? true : false;*/
+        }
     }
 }
