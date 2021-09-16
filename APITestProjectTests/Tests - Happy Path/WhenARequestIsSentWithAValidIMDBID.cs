@@ -48,7 +48,13 @@ namespace APITestProjectTests.Tests___Happy_Path
         [TestCase("Raniel Radcliffe", false)]
         public void MovieHas_Actor(string actorName, bool result)
         {
-            Assert.That(_movieService.MovieResponse.Contains(actorName), Is.EqualTo(result));
+            Assert.That(_movieService.IsActorInMovie(actorName), Is.EqualTo(result));
+        }
+
+        [TestCase(true)]
+        public void DoesMovieHaveAwardsOrNominations(bool result)
+        {
+            Assert.That(_movieService.HasMovieReceivedAwards(), Is.EqualTo(result));
         }
     }
 }
