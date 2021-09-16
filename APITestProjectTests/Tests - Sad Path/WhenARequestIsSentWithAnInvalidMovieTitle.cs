@@ -14,10 +14,5 @@ namespace APITestProjectTests.Tests___Sad_Path
             _movieServices = new MovieServices();
             await _movieServices.MakeAMovieRequestAsync("idk");
         }
-        [Test]
-        public void GivenAnInvalidMovieTitle_ResponseIsFalse()
-        {
-            Assert.That(_movieServices.MovieResponseDTO.Response, Is.EqualTo("False"));
-        }
     }
 }
