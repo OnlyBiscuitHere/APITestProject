@@ -43,5 +43,12 @@ namespace APITestProjectTests.Tests___Happy_Path
         {
             Assert.That(_movieService.MovieResponseDTO.Response.Ratings.Any(r => r.Source == "Rotten Tomatoes"));
         }
+
+        [TestCase("Keanu Reeves", true)]
+        [TestCase("Raniel Radcliffe", false)]
+        public void MovieHas_Actor(string actorName, bool result)
+        {
+            Assert.That(_movieService.MovieResponse.Contains(actorName), Is.EqualTo(result));
+        }
     }
 }
